@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find the right soundtrack for whatever mood you are in.">
+  <title>mood.fm | Find your feeling</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="mood.fm home">mood<span>.</span>fm</a>
+    <nav aria-label="Primary navigation">
+      <a href="#discover">Discover</a>
+      <a href="#mix">Your mix</a>
+      <button class="icon-button" id="randomMood" type="button" aria-label="Choose a random mood">⤨</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="status-dot"></span> Your daily soundtrack, sorted</p>
+      <div class="hero-grid">
+        <h1 id="hero-title">What’s the<br><em>feeling?</em></h1>
+        <div class="hero-note">
+          <p>Skip the endless scrolling. Tell us where your head is at and we’ll find the songs to meet you there.</p>
+          <a class="arrow-link" href="#discover">Choose a mood <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-meta" aria-label="Music finder details">
+        <span>01 / Curated by feeling</span><span>02 / No skips required</span><span>03 / Press play</span>
+      </div>
+    </section>
+
+    <section class="discover section-rule" id="discover" aria-labelledby="discover-title">
+      <div class="section-label">01 / Pick a mood</div>
+      <div class="discover-content">
+        <div><h2 id="discover-title">Set the<br><span>tone.</span></h2><p class="small-note">There’s a song for that.</p></div>
+        <div class="mood-grid" role="group" aria-label="Mood choices">
+          <button class="mood-card active" data-mood="sunny" type="button"><span class="mood-icon">☀</span><strong>Sunny</strong><small>Good news only</small></button>
+          <button class="mood-card" data-mood="soft" type="button"><span class="mood-icon">☁</span><strong>Soft</strong><small>Slow morning energy</small></button>
+          <button class="mood-card" data-mood="focus" type="button"><span class="mood-icon">◒</span><strong>Focus</strong><small>Deep work mode</small></button>
+          <button class="mood-card" data-mood="electric" type="button"><span class="mood-icon">ϟ</span><strong>Electric</strong><small>Turn it all the way up</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendations section-rule" id="mix" aria-labelledby="mix-title">
+      <div class="section-label">02 / Your recommendation</div>
+      <div class="mix-heading"><div><h2 id="mix-title">A little<br><em>sunshine.</em></h2><p id="moodDescription" class="small-note">Bright, breezy, and impossible to sit still.</p></div><span class="mix-count" id="mixCount">03 tracks</span></div>
+      <div class="track-list" id="trackList" aria-live="polite"></div>
+      <div class="player-bar" id="playerBar" hidden><div class="playing-art" id="playingArt">☀</div><div class="playing-copy"><span>Now playing</span><strong id="playingTitle">Good Days</strong></div><button class="play-button" id="playButton" type="button" aria-label="Pause song">Ⅱ</button><div class="progress"><span id="progressBar"></span></div></div>
+    </section>
+
+    <section class="contact section-rule" aria-labelledby="contact-title">
+      <p class="eyebrow">A good song changes the room</p><h2 id="contact-title">Come back<br>when you’re <em>feeling it.</em></h2><a class="contact-link" href="#discover">Find another mood <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© 2025 mood.fm</span><span>Made for listening <b>✦</b></span></footer>
+</body>
+</html>
